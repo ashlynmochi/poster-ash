@@ -1,37 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Poster</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        html, body { width: 100%; height: 100%; overflow: hidden; display: flex; align-items: center; justify-content: center; background: white; }
-        svg { width: 100%; height: 100%; max-width: 100vh; }
-        .cls-1 {
-            fill: none;
-            stroke: #b113e5;
-            stroke-width: 2;
-            stroke-linecap: round;
-            stroke-linejoin: round;
-            transition: fill 0.8s ease, stroke 0.8s ease;
-        }
-        .cls-1.filled {
-            fill: #b113e5;
-            stroke: none;
-        }
-    </style>
-    <script type="importmap">
-    {
-        "imports": {
-            "animejs": "https://cdn.jsdelivr.net/npm/animejs@4/+esm"
-        }
-    }
-    </script>
-</head>
-<body>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1417.32 1984.25">
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="50cm" height="70cm" viewBox="0 0 1417.32 1984.25">
   <defs>
+    <style>
+      .cls-1 {
+        fill: #b113e5;
+      }
+    </style>
   </defs>
   <g id="testo-uno">
     <g id="testo-uno-2" data-name="testo-uno">
@@ -286,21 +260,3 @@
     </g>
   </g>
 </svg>
-<script type="module">
-import { animate, svg, stagger } from 'animejs';
-
-const drawables = svg.createDrawable('.cls-1');
-
-const anim = animate(drawables, {
-    draw: ['0 0', '0 1'],
-    duration: 1500,
-    ease: 'outQuad',
-    delay: stagger(25),
-});
-
-anim.finished.then(() => {
-    document.querySelectorAll('.cls-1').forEach(el => el.classList.add('filled'));
-});
-</script>
-</body>
-</html>
